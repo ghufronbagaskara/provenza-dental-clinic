@@ -7,6 +7,7 @@ import {
 import { clamp, h, rad, reducedMotion } from '../dom.js'
 import { icons } from '../icons.js'
 import { url } from '../data.js'
+import { captureCanvas, createSnapshotFeedback, isPlainShortcut, stampName } from '../snapshot.js'
 import { createMinimap } from './minimap.js'
 import { testPanoCanvas } from './procedural.js'
 
@@ -38,7 +39,6 @@ async function loadImageTexture(src) {
 
 let showHints = true
 try { showHints = localStorage.getItem('provenza-tur-petunjuk') !== '0' } catch { /* abaikan */ }
-const pad2 = (n) => String(n).padStart(2, '0')
 
 export function createTour({ host, tour, navigate, exit }) {
   const renderer = new WebGLRenderer({ antialias: false, powerPreference: 'high-performance' })
@@ -79,8 +79,8 @@ export function createTour({ host, tour, navigate, exit }) {
   const exitBtn = h('button', { class: 'btn exit', type: 'button', onclick: () => exit() }, h('span', { html: icons.exit }), h('span', {}, 'Keluar'))
   const hintBtn = h('button', { class: 'btn tbtn', type: 'button', 'aria-pressed': String(showHints), 'aria-label': 'Petunjuk', title: 'Petunjuk (H)', onclick: () => setHints(!showHints) }, h('span', { html: icons.hint }), h('span', { class: 'lbl' }, 'Petunjuk'))
   const shotBtn = h('button', { class: 'btn tbtn', type: 'button', 'aria-label': 'Ambil gambar', title: 'Ambil gambar (P)', onclick: () => capture() }, h('span', { html: icons.camera }), h('span', { class: 'lbl' }, 'Ambil gambar'))
-  const flash = h('div', { class: 'tour-flash', 'aria-hidden': 'true' })
-  const toast = h('div', { class: 'tour-toast', role: 'status', hidden: true }, 'Gambar disimpan')
+  const feedback = createSnapshotFeedback()
+  const { flash, toast } = feedback
   const prevBtn = h('button', { class: 'btn', type: 'button', 'aria-label': 'Panorama sebelumnya', onclick: () => step(-1) }, h('span', { html: icons.prev }), h('span', {}, 'Sebelumnya'))
   const nextBtn = h('button', { class: 'btn', type: 'button', 'aria-label': 'Panorama berikutnya', onclick: () => step(1) }, h('span', {}, 'Berikutnya'), h('span', { html: icons.next }))
   const minimap = createMinimap({ tour, onJump: (id) => navigate(id) })
@@ -449,42 +449,17 @@ export function createTour({ host, tour, navigate, exit }) {
     try { localStorage.setItem('provenza-tur-petunjuk', on ? '1' : '0') } catch { /* abaikan */ }
     requestRender()
   }
-  let toastTimer = 0
   function capture() {
     if (!active || !width || !currentId) return
-    const dpr = renderer.getPixelRatio()
-    const long = Math.max(width, height)
-    const scale = Math.max(dpr, Math.min(2, 3840 / long))
-    const stamp = new Date()
-    const name = `provenza-${currentId}-${stamp.getFullYear()}${pad2(stamp.getMonth() + 1)}${pad2(stamp.getDate())}-${pad2(stamp.getHours())}${pad2(stamp.getMinutes())}${pad2(stamp.getSeconds())}.png`
-    // Render ulang satu frame di resolusi tinggi lalu toBlob di tick yang sama; DOM (UI) tidak ikut.
-    renderer.setPixelRatio(scale)
-    renderer.setSize(width, height, false)
-    applyCamera()
-    renderer.render(scene, camera)
-    canvas.toBlob((blob) => {
-      if (!blob) return
-      const a = h('a', { href: URL.createObjectURL(blob), download: name })
-      document.body.append(a)
-      a.click()
-      a.remove()
-      setTimeout(() => URL.revokeObjectURL(a.href), 4000)
-    }, 'image/png')
-    renderer.setPixelRatio(dpr)
-    renderer.setSize(width, height, false)
-    renderer.render(scene, camera)
+    captureCanvas({
+      renderer, width, height, name: stampName(`provenza-${currentId}`),
+      render: () => { applyCamera(); renderer.render(scene, camera) },
+    })
     requestRender()
-    if (!reducedMotion) {
-      flash.classList.remove('go')
-      void flash.offsetWidth
-      flash.classList.add('go')
-    }
-    toast.hidden = false
-    clearTimeout(toastTimer)
-    toastTimer = setTimeout(() => { toast.hidden = true }, 1800)
+    feedback.notify()
   }
   addEventListener('keydown', (e) => {
-    if (active && !e.ctrlKey && !e.metaKey && !e.altKey && !/^(INPUT|TEXTAREA|SELECT)$/.test(e.target?.tagName ?? '') && !e.target?.isContentEditable) {
+    if (active && isPlainShortcut(e)) {
       const k = e.key.toLowerCase()
       if (k === 'h') { setHints(!showHints); return }
       if (k === 'p') { capture(); return }
