@@ -1,0 +1,1820 @@
+{
+  "building": {
+    "width": 22.0,
+    "depth": 13.6,
+    "ceiling": 2.9
+  },
+  "zones": [
+    {
+      "id": "publik",
+      "label": "Publik (tunggu, bermain anak, baca)",
+      "color": "#78aadc"
+    },
+    {
+      "id": "admin",
+      "label": "Administrasi & farmasi",
+      "color": "#f0b45a"
+    },
+    {
+      "id": "klinis",
+      "label": "Klinis / ruang praktik",
+      "color": "#6ebe96"
+    },
+    {
+      "id": "kotor",
+      "label": "Sterilisasi: kotor (dekontaminasi)",
+      "color": "#dc645a"
+    },
+    {
+      "id": "bersih",
+      "label": "Sterilisasi: bersih (kemas)",
+      "color": "#f0c850"
+    },
+    {
+      "id": "steril",
+      "label": "AREA STERIL (simpan & serah)",
+      "color": "#4696e6"
+    },
+    {
+      "id": "radiasi",
+      "label": "Radiologi / zona radiasi",
+      "color": "#aa78d2"
+    },
+    {
+      "id": "servis",
+      "label": "Servis / toilet",
+      "color": "#969696"
+    },
+    {
+      "id": "ibadah",
+      "label": "Ibadah (mushola & wudhu)",
+      "color": "#96c86e"
+    },
+    {
+      "id": "sirkulasi",
+      "label": "Sirkulasi",
+      "color": "#e1d7c3"
+    }
+  ],
+  "zoneRects": [
+    {
+      "zone": "publik",
+      "rect": [
+        0.2,
+        0.2,
+        8.74,
+        5.94
+      ]
+    },
+    {
+      "zone": "admin",
+      "rect": [
+        9.06,
+        0.2,
+        5.38,
+        5.94
+      ]
+    },
+    {
+      "zone": "admin",
+      "rect": [
+        14.56,
+        0.2,
+        3.38,
+        5.94
+      ]
+    },
+    {
+      "zone": "ibadah",
+      "rect": [
+        18.06,
+        0.2,
+        3.74,
+        3.34
+      ]
+    },
+    {
+      "zone": "ibadah",
+      "rect": [
+        20.06,
+        3.66,
+        1.74,
+        2.48
+      ]
+    },
+    {
+      "zone": "servis",
+      "rect": [
+        18.06,
+        3.66,
+        1.88,
+        2.48
+      ]
+    },
+    {
+      "zone": "sirkulasi",
+      "rect": [
+        0.2,
+        6.26,
+        21.6,
+        1.68
+      ]
+    },
+    {
+      "zone": "klinis",
+      "rect": [
+        0.2,
+        8.06,
+        4.74,
+        5.34
+      ]
+    },
+    {
+      "zone": "klinis",
+      "rect": [
+        5.06,
+        8.06,
+        4.88,
+        5.34
+      ]
+    },
+    {
+      "zone": "klinis",
+      "rect": [
+        13.26,
+        8.06,
+        4.84,
+        5.34
+      ]
+    },
+    {
+      "zone": "radiasi",
+      "rect": [
+        18.3,
+        8.1,
+        3.5,
+        5.3
+      ]
+    },
+    {
+      "zone": "kotor",
+      "rect": [
+        10.06,
+        8.06,
+        1.24,
+        3.09
+      ]
+    },
+    {
+      "zone": "bersih",
+      "rect": [
+        10.06,
+        11.15,
+        3.08,
+        2.25
+      ]
+    },
+    {
+      "zone": "steril",
+      "rect": [
+        12.0,
+        8.06,
+        1.14,
+        3.09
+      ]
+    },
+    {
+      "zone": "sirkulasi",
+      "rect": [
+        11.3,
+        8.06,
+        0.7,
+        3.09
+      ]
+    }
+  ],
+  "rooms": [
+    {
+      "id": "tunggu",
+      "no": 1,
+      "name": "Ruang Tunggu",
+      "zone": "publik",
+      "area": 51.9,
+      "rect": [
+        0.0,
+        0.0,
+        9.0,
+        6.2
+      ],
+      "inner": [
+        0.2,
+        0.2,
+        8.74,
+        5.94
+      ],
+      "description": "Ruang tunggu terbuka yang menyatu dengan resepsionis, diterangi jendela kaca bergrid di fasad selatan. Ada area duduk utama, sudut baca, dan pojok bermain anak.",
+      "equipment": [
+        "Sofa tiga dudukan dan dua kursi berlengan",
+        "Meja kopi bundar di atas karpet",
+        "Sudut baca: rak buku rendah, kursi santai, lampu lantai, meja samping",
+        "Pojok anak: matras, meja dan tiga kursi anak, rak mainan",
+        "Dispenser air minum",
+        "Tiga tanaman pot dan lukisan dinding",
+        "Jam dinding"
+      ],
+      "pano": "tunggu"
+    },
+    {
+      "id": "resepsionis",
+      "no": 2,
+      "name": "Resepsionis & Administrasi",
+      "zone": "admin",
+      "area": 32.0,
+      "rect": [
+        9.0,
+        0.0,
+        5.5,
+        6.2
+      ],
+      "inner": [
+        9.06,
+        0.2,
+        5.38,
+        5.94
+      ],
+      "description": "Counter resepsionis menghadap pintu masuk kaca. Di belakangnya meja administrasi, lemari arsip, dan dinding poster edukasi gigi; pintu di dinding timur menuju farmasi.",
+      "equipment": [
+        "Counter resepsionis 3 m dengan komputer dan dua kursi kerja",
+        "Meja administrasi dengan kursi kerja",
+        "Lemari arsip dan kabinet printer",
+        "Lima poster edukasi gigi",
+        "Dua tanaman pot"
+      ],
+      "pano": "resepsionis"
+    },
+    {
+      "id": "farmasi",
+      "no": 3,
+      "name": "Farmasi",
+      "zone": "admin",
+      "area": 20.1,
+      "rect": [
+        14.5,
+        0.0,
+        3.5,
+        6.2
+      ],
+      "inner": [
+        14.56,
+        0.2,
+        3.38,
+        5.94
+      ],
+      "description": "Ruang obat dengan rak setinggi dinding, lemari kaca, dan kulkas obat. Obat diserahkan lewat loket ke koridor.",
+      "equipment": [
+        "Rak obat 3,4 m",
+        "Lemari kaca",
+        "Kulkas obat",
+        "Meja racik dengan bangku",
+        "Counter loket obat",
+        "Poster Simpan obat",
+        "Jam dinding"
+      ],
+      "pano": "farmasi"
+    },
+    {
+      "id": "mushola",
+      "no": 4,
+      "name": "Mushola",
+      "zone": "ibadah",
+      "area": 12.5,
+      "rect": [
+        18.0,
+        0.0,
+        4.0,
+        3.6
+      ],
+      "inner": [
+        18.06,
+        0.2,
+        3.74,
+        3.34
+      ],
+      "description": "Mushola untuk pasien dan staf dengan sajadah dan penunjuk kiblat. Pintu masuknya lewat tempat wudhu.",
+      "equipment": [
+        "Karpet dan sajadah",
+        "Rak Al-Qur'an dan mukena",
+        "Penunjuk arah kiblat",
+        "Lukisan dinding",
+        "Jam dinding"
+      ],
+      "pano": "mushola"
+    },
+    {
+      "id": "wudhu",
+      "no": 5,
+      "name": "Tempat Wudhu",
+      "zone": "ibadah",
+      "area": 4.3,
+      "rect": [
+        20.0,
+        3.6,
+        2.0,
+        2.6
+      ],
+      "inner": [
+        20.06,
+        3.66,
+        1.74,
+        2.48
+      ],
+      "description": "Tempat wudhu ringkas antara koridor dan mushola.",
+      "equipment": [
+        "Stasiun wudhu dengan keran berderet",
+        "Lantai ubin"
+      ],
+      "pano": null
+    },
+    {
+      "id": "toilet",
+      "no": 6,
+      "name": "Toilet",
+      "zone": "servis",
+      "area": 4.7,
+      "rect": [
+        18.0,
+        3.6,
+        2.0,
+        2.6
+      ],
+      "inner": [
+        18.06,
+        3.66,
+        1.88,
+        2.48
+      ],
+      "description": "Toilet pasien yang dibuka dari koridor.",
+      "equipment": [
+        "Kloset duduk",
+        "Wastafel dinding"
+      ],
+      "pano": null
+    },
+    {
+      "id": "koridor",
+      "no": 7,
+      "name": "Koridor",
+      "zone": "sirkulasi",
+      "area": 36.3,
+      "rect": [
+        0.0,
+        6.2,
+        22.0,
+        1.8
+      ],
+      "inner": [
+        0.2,
+        6.26,
+        21.6,
+        1.68
+      ],
+      "description": "Koridor selebar 1,8 m yang menghubungkan hall depan dengan deret ruang klinis di sisi utara. Pintu servis ada di ujung barat.",
+      "equipment": [
+        "Downlight berderet",
+        "Loket farmasi",
+        "Lampu tanda radiasi di pintu radiologi",
+        "Pintu servis barat",
+        "Lukisan dinding",
+        "Jam dinding",
+        "Tanaman pot"
+      ],
+      "pano": "koridor-barat"
+    },
+    {
+      "id": "praktik-1",
+      "no": 8,
+      "name": "Ruang Praktik 1",
+      "zone": "klinis",
+      "area": 25.3,
+      "rect": [
+        0.0,
+        8.0,
+        5.0,
+        5.6
+      ],
+      "inner": [
+        0.2,
+        8.06,
+        4.74,
+        5.34
+      ],
+      "description": "Dental unit lurus sejajar jendela lebar bervitrase di sisi asisten. Kabinet dan wastafel di dinding barat menjadi zona statis jam 12, dengan ruang bebas ≥ 1,0 m di belakang sandaran kepala. Instrumen kotor dibawa ke sterilisasi lewat koridor dalam kotak tertutup.",
+      "equipment": [
+        "Dental unit dengan monitor",
+        "Kursi operator dan kursi asisten",
+        "Dinding kabinet dengan wastafel",
+        "Meja konsultasi, kursi dokter, dua kursi tamu",
+        "Troli instrumen",
+        "Panel kayu dinding timur",
+        "Hand rub, tempat sampah medis dan pedal",
+        "Tanaman pot",
+        "Lukisan dinding",
+        "Jam dinding"
+      ],
+      "pano": "praktik-1"
+    },
+    {
+      "id": "praktik-2",
+      "no": 9,
+      "name": "Ruang Praktik 2",
+      "zone": "klinis",
+      "area": 26.1,
+      "rect": [
+        5.0,
+        8.0,
+        5.0,
+        5.6
+      ],
+      "inner": [
+        5.06,
+        8.06,
+        4.88,
+        5.34
+      ],
+      "description": "Dental unit lurus sejajar jendela lebar bervitrase di sisi asisten. Kabinet dan wastafel di dinding barat menjadi zona statis jam 12, dengan ruang bebas ≥ 1,0 m di belakang sandaran kepala. Loket pass-through di dinding timur langsung ke sterilisasi.",
+      "equipment": [
+        "Dental unit dengan monitor",
+        "Kursi operator dan kursi asisten",
+        "Dinding kabinet dengan wastafel",
+        "Meja konsultasi, kursi dokter, dua kursi tamu",
+        "Troli instrumen",
+        "Panel kayu dinding timur",
+        "Hand rub, tempat sampah medis dan pedal",
+        "Tanaman pot",
+        "Lukisan dinding",
+        "Jam dinding"
+      ],
+      "pano": "praktik-2"
+    },
+    {
+      "id": "sterilisasi",
+      "no": 10,
+      "name": "Sterilisasi",
+      "zone": "steril",
+      "area": 16.4,
+      "rect": [
+        10.0,
+        8.0,
+        3.2,
+        5.6
+      ],
+      "inner": [
+        10.06,
+        8.06,
+        3.08,
+        5.34
+      ],
+      "description": "Instrumen bergerak satu arah: kotor, cuci, kemas, autoklaf, lalu disimpan steril. Instrumen dari Ruang Praktik 2 dan 3 masuk lewat loket pass-through.",
+      "equipment": [
+        "Counter kotor dan counter cuci",
+        "Lemari pengering",
+        "Counter kemas dan counter autoklaf",
+        "Counter steril dan lemari steril berpintu kaca",
+        "Tempat sampah pedal",
+        "Penanda alur di lantai"
+      ],
+      "pano": "sterilisasi"
+    },
+    {
+      "id": "praktik-3",
+      "no": 11,
+      "name": "Ruang Praktik 3",
+      "zone": "klinis",
+      "area": 25.8,
+      "rect": [
+        13.2,
+        8.0,
+        5.0,
+        5.6
+      ],
+      "inner": [
+        13.26,
+        8.06,
+        4.84,
+        5.34
+      ],
+      "description": "Dental unit lurus sejajar jendela lebar bervitrase di sisi asisten. Kabinet dan wastafel di dinding barat menjadi zona statis jam 12, dengan ruang bebas ≥ 1,0 m di belakang sandaran kepala. Loket pass-through di dinding barat langsung ke sterilisasi.",
+      "equipment": [
+        "Dental unit dengan monitor",
+        "Kursi operator dan kursi asisten",
+        "Dinding kabinet dengan wastafel",
+        "Meja konsultasi, kursi dokter, dua kursi tamu",
+        "Troli instrumen",
+        "Panel kayu dinding timur",
+        "Hand rub, tempat sampah medis dan pedal",
+        "Tanaman pot",
+        "Lukisan dinding",
+        "Jam dinding"
+      ],
+      "pano": "praktik-3"
+    },
+    {
+      "id": "radiologi",
+      "no": 12,
+      "name": "Radiologi Panoramik",
+      "zone": "radiasi",
+      "area": 18.6,
+      "rect": [
+        18.2,
+        8.0,
+        3.8,
+        5.6
+      ],
+      "inner": [
+        18.3,
+        8.1,
+        3.5,
+        5.3
+      ],
+      "description": "Ruang rontgen panoramik dengan dinding dan pintu berlapis timbal. Operator memotret dari balik tabir timbal, lalu membaca hasil di meja baca.",
+      "equipment": [
+        "Unit rontgen panoramik",
+        "Tabir timbal dengan konsol paparan",
+        "Meja baca dengan monitor radiograf dan kursi",
+        "Rak apron timbal",
+        "Lemari kecil",
+        "Lampu tanda X-RAY ON",
+        "Poster Posisi pasien",
+        "Poster Proteksi radiasi"
+      ],
+      "pano": "radiologi"
+    }
+  ],
+  "flows": [
+    {
+      "id": "pasien",
+      "group": "pasien",
+      "label": "Alur pasien: daftar → tunggu → koridor",
+      "color": "#1f5fa8",
+      "dashed": false,
+      "points": [
+        [
+          9.0,
+          -1.6
+        ],
+        [
+          9.0,
+          2.3
+        ],
+        [
+          10.75,
+          2.3
+        ],
+        [
+          10.75,
+          2.9
+        ],
+        [
+          7.4,
+          2.9
+        ],
+        [
+          7.4,
+          3.7
+        ],
+        [
+          7.4,
+          4.3
+        ],
+        [
+          7.4,
+          4.95
+        ],
+        [
+          9.1,
+          4.95
+        ],
+        [
+          9.1,
+          7.1
+        ]
+      ],
+      "steps": [
+        [
+          10.75,
+          2.3
+        ],
+        [
+          7.4,
+          3.7
+        ],
+        [
+          9.1,
+          7.1
+        ]
+      ]
+    },
+    {
+      "id": "pasien-praktik-1",
+      "group": "pasien",
+      "label": "Alur pasien ke Ruang Praktik 1",
+      "color": "#1f5fa8",
+      "dashed": false,
+      "points": [
+        [
+          9.1,
+          7.1
+        ],
+        [
+          4.2,
+          7.1
+        ],
+        [
+          4.2,
+          9.0
+        ]
+      ]
+    },
+    {
+      "id": "pasien-praktik-2",
+      "group": "pasien",
+      "label": "Alur pasien ke Ruang Praktik 2",
+      "color": "#1f5fa8",
+      "dashed": false,
+      "points": [
+        [
+          9.1,
+          7.1
+        ],
+        [
+          9.2,
+          7.1
+        ],
+        [
+          9.2,
+          9.0
+        ]
+      ]
+    },
+    {
+      "id": "pasien-praktik-3",
+      "group": "pasien",
+      "label": "Alur pasien ke Ruang Praktik 3",
+      "color": "#1f5fa8",
+      "dashed": false,
+      "points": [
+        [
+          9.1,
+          7.1
+        ],
+        [
+          17.4,
+          7.1
+        ],
+        [
+          17.4,
+          9.0
+        ]
+      ]
+    },
+    {
+      "id": "pasien-radiologi",
+      "group": "pasien",
+      "label": "Alur pasien ke Radiologi",
+      "color": "#1f5fa8",
+      "dashed": false,
+      "points": [
+        [
+          17.4,
+          7.1
+        ],
+        [
+          19.35,
+          7.1
+        ],
+        [
+          19.35,
+          9.0
+        ]
+      ]
+    },
+    {
+      "id": "instrumen",
+      "group": "instrumen",
+      "label": "Alur instrumen satu arah: kotor → cuci → kemas → autoklaf → steril",
+      "color": "#c0392b",
+      "dashed": false,
+      "points": [
+        [
+          8.6,
+          8.75
+        ],
+        [
+          10.4,
+          8.75
+        ],
+        [
+          10.75,
+          8.75
+        ],
+        [
+          10.75,
+          9.6
+        ],
+        [
+          10.75,
+          12.5
+        ],
+        [
+          12.3,
+          12.5
+        ],
+        [
+          12.3,
+          12.6
+        ],
+        [
+          12.5,
+          12.6
+        ],
+        [
+          12.5,
+          9.6
+        ],
+        [
+          12.5,
+          8.75
+        ],
+        [
+          14.0,
+          8.75
+        ]
+      ]
+    },
+    {
+      "id": "instrumen-praktik-1",
+      "group": "instrumen",
+      "label": "Instrumen Ruang Praktik 1 lewat koridor (kotak tertutup)",
+      "color": "#c0392b",
+      "dashed": true,
+      "points": [
+        [
+          4.2,
+          9.4
+        ],
+        [
+          4.2,
+          7.55
+        ],
+        [
+          11.6,
+          7.55
+        ],
+        [
+          11.6,
+          8.9
+        ]
+      ]
+    }
+  ],
+  "clearances": [
+    {
+      "room": "praktik-1",
+      "rect": [
+        0.8,
+        11.26,
+        1.15,
+        1.0
+      ],
+      "label": "≥ 1,0 m bebas"
+    },
+    {
+      "room": "praktik-2",
+      "rect": [
+        5.66,
+        11.26,
+        1.15,
+        1.0
+      ],
+      "label": "≥ 1,0 m bebas"
+    },
+    {
+      "room": "praktik-3",
+      "rect": [
+        13.86,
+        11.26,
+        1.15,
+        1.0
+      ],
+      "label": "≥ 1,0 m bebas"
+    }
+  ],
+  "plan": {
+    "image": "plan/plan.webp",
+    "bounds": [
+      -1.3,
+      -1.2,
+      23.3,
+      14.8
+    ],
+    "size": [
+      2460,
+      1600
+    ]
+  },
+  "maket": {
+    "file": "maket/maket.glb",
+    "poster": "maket/poster.webp",
+    "transform": "glTF Y-up; X = timur, −Z = utara; origin = sudut barat-daya",
+    "nodes": {
+      "struktur": {
+        "group": "struktur",
+        "triangles": 14902,
+        "atlas": 2048
+      },
+      "room:toilet": {
+        "group": "toilet",
+        "triangles": 1646,
+        "atlas": 1024
+      },
+      "room:wudhu": {
+        "group": "wudhu",
+        "triangles": 2378,
+        "atlas": 1024
+      },
+      "room:praktik-1": {
+        "group": "praktik1",
+        "triangles": 21947,
+        "atlas": 2048
+      },
+      "room:praktik-2": {
+        "group": "praktik2",
+        "triangles": 21947,
+        "atlas": 2048
+      },
+      "room:praktik-3": {
+        "group": "praktik3",
+        "triangles": 21949,
+        "atlas": 2048
+      },
+      "room:farmasi": {
+        "group": "farmasi",
+        "triangles": 71416,
+        "atlas": 2048
+      },
+      "room:koridor": {
+        "group": "koridor",
+        "triangles": 3102,
+        "atlas": 1024
+      },
+      "room:radiologi": {
+        "group": "radiologi",
+        "triangles": 15822,
+        "atlas": 1024
+      },
+      "room:tunggu": {
+        "group": "tunggu",
+        "triangles": 43099,
+        "atlas": 2048
+      },
+      "room:resepsionis": {
+        "group": "resepsionis",
+        "triangles": 16132,
+        "atlas": 2048
+      },
+      "room:mushola": {
+        "group": "mushola",
+        "triangles": 2771,
+        "atlas": 1024
+      },
+      "room:sterilisasi": {
+        "group": "steril",
+        "triangles": 13818,
+        "atlas": 2048
+      },
+      "tapak": {
+        "group": "tapak",
+        "triangles": 15015,
+        "atlas": 2048
+      },
+      "du:praktik-1": {
+        "group": "du",
+        "triangles": 19771,
+        "atlas": 512,
+        "instanced": true
+      },
+      "du:praktik-2": {
+        "group": "du",
+        "triangles": 19771,
+        "atlas": 512,
+        "instanced": true
+      },
+      "du:praktik-3": {
+        "group": "du",
+        "triangles": 19771,
+        "atlas": 512,
+        "instanced": true
+      },
+      "kaca:kaca": {
+        "group": "kaca",
+        "triangles": 2642
+      },
+      "kaca:vitrase": {
+        "group": "kaca",
+        "triangles": 7305
+      },
+      "kaca:lain": {
+        "group": "kaca",
+        "triangles": 5602
+      },
+      "kaca:kaca-buram": {
+        "group": "kaca",
+        "triangles": 212
+      },
+      "kaca:kaca-timbal": {
+        "group": "kaca",
+        "triangles": 12
+      }
+    },
+    "baked": true
+  },
+  "panos": [
+    {
+      "id": "luar-parkir",
+      "room": null,
+      "label": "Tampak luar",
+      "position": [
+        11.0,
+        -8.0,
+        1.403
+      ],
+      "northYawDeg": 0,
+      "files": {
+        "preview": "panos/luar-parkir-preview.webp",
+        "mobile": "panos/luar-parkir-mobile.webp",
+        "full": "panos/luar-parkir-full.webp"
+      },
+      "links": [
+        {
+          "to": "luar-pintu",
+          "yawDeg": 341.6,
+          "pitchDeg": -19.6,
+          "via": null
+        }
+      ],
+      "info": [
+        {
+          "yawDeg": 325.2,
+          "pitchDeg": -32.6,
+          "title": "Parkir + petak difabel",
+          "text": "Lima petak mobil dan satu petak difabel bergaris biru di depan pintu masuk.",
+          "target": [
+            9.75,
+            -6.2,
+            0.0
+          ]
+        },
+        {
+          "yawDeg": 346.1,
+          "pitchDeg": -2.8,
+          "title": "Pintu masuk kaca",
+          "text": "Pintu kaca ganda di bawah portal tinggi bertanda Provenza Dental.",
+          "target": [
+            9.0,
+            0.1,
+            1.0
+          ]
+        }
+      ],
+      "shift": 0.0
+    },
+    {
+      "id": "luar-pintu",
+      "room": null,
+      "label": "Teras pintu masuk",
+      "position": [
+        9.0,
+        -2.0,
+        1.53
+      ],
+      "northYawDeg": 0,
+      "files": {
+        "preview": "panos/luar-pintu-preview.webp",
+        "mobile": "panos/luar-pintu-mobile.webp",
+        "full": "panos/luar-pintu-full.webp"
+      },
+      "links": [
+        {
+          "to": "luar-parkir",
+          "yawDeg": 161.6,
+          "pitchDeg": -22.7,
+          "via": null
+        },
+        {
+          "to": "resepsionis",
+          "yawDeg": 0.0,
+          "pitchDeg": -14.7,
+          "via": "d_masuk"
+        }
+      ],
+      "info": [
+        {
+          "yawDeg": 169.9,
+          "pitchDeg": -19.7,
+          "title": "Parkir + petak difabel",
+          "text": "Petak difabel paling dekat dengan pintu masuk, tanpa beda tinggi.",
+          "target": [
+            9.75,
+            -6.2,
+            0.0
+          ]
+        },
+        {
+          "yawDeg": 0.0,
+          "pitchDeg": -14.2,
+          "title": "Pintu masuk kaca",
+          "text": "Pintu kaca ganda langsung ke hall resepsionis.",
+          "target": [
+            9.0,
+            0.1,
+            1.0
+          ]
+        }
+      ],
+      "shift": 0.0
+    },
+    {
+      "id": "tunggu",
+      "room": "tunggu",
+      "label": "Ruang Tunggu",
+      "position": [
+        4.6,
+        3.0,
+        1.55
+      ],
+      "northYawDeg": 0,
+      "files": {
+        "preview": "panos/tunggu-preview.webp",
+        "mobile": "panos/tunggu-mobile.webp",
+        "full": "panos/tunggu-full.webp"
+      },
+      "links": [
+        {
+          "to": "resepsionis",
+          "yawDeg": 94.1,
+          "pitchDeg": -21.2,
+          "via": null
+        }
+      ],
+      "info": [
+        {
+          "yawDeg": 292.5,
+          "pitchDeg": -12.1,
+          "title": "Sudut baca",
+          "text": "Rak buku rendah, kursi santai, dan lampu lantai di pojok barat-laut.",
+          "target": [
+            0.38,
+            4.75,
+            0.57
+          ]
+        },
+        {
+          "yawDeg": 242.3,
+          "pitchDeg": -24.7,
+          "title": "Pojok mainan anak",
+          "text": "Matras, meja dan kursi anak, serta rak mainan dekat jendela.",
+          "target": [
+            1.65,
+            1.45,
+            0.02
+          ]
+        },
+        {
+          "yawDeg": 47.4,
+          "pitchDeg": -10.7,
+          "title": "Dispenser air minum",
+          "text": "Air minum untuk pasien di sudut timur laut ruang tunggu.",
+          "target": [
+            7.75,
+            5.9,
+            0.74
+          ]
+        }
+      ],
+      "shift": 0.0
+    },
+    {
+      "id": "resepsionis",
+      "room": "resepsionis",
+      "label": "Resepsionis & Administrasi",
+      "position": [
+        10.2,
+        2.6,
+        1.55
+      ],
+      "northYawDeg": 0,
+      "files": {
+        "preview": "panos/resepsionis-preview.webp",
+        "mobile": "panos/resepsionis-mobile.webp",
+        "full": "panos/resepsionis-full.webp"
+      },
+      "links": [
+        {
+          "to": "luar-pintu",
+          "yawDeg": 205.6,
+          "pitchDeg": -11.2,
+          "via": "d_masuk"
+        },
+        {
+          "to": "tunggu",
+          "yawDeg": 274.1,
+          "pitchDeg": -21.2,
+          "via": null
+        },
+        {
+          "to": "koridor-barat",
+          "yawDeg": 343.0,
+          "pitchDeg": -8.3,
+          "via": "o_hall"
+        }
+      ],
+      "info": [
+        {
+          "yawDeg": 93.4,
+          "pitchDeg": 0.7,
+          "title": "Poster edukasi gigi",
+          "text": "Poster anatomi gigi, cara menyikat gigi, serta gigi susu dan gigi tetap.",
+          "target": [
+            14.43,
+            2.35,
+            1.6
+          ]
+        },
+        {
+          "yawDeg": 62.4,
+          "pitchDeg": -6.5,
+          "title": "Akses farmasi",
+          "text": "Pintu dari area administrasi ke farmasi untuk staf.",
+          "target": [
+            14.5,
+            4.85,
+            1.0
+          ]
+        },
+        {
+          "yawDeg": 72.1,
+          "pitchDeg": -33.6,
+          "title": "Counter resepsionis",
+          "text": "Pasien mendaftar di sini sebelum menunggu dipanggil.",
+          "target": [
+            11.43,
+            3.0,
+            0.69
+          ]
+        }
+      ],
+      "shift": 0.0
+    },
+    {
+      "id": "farmasi",
+      "room": "farmasi",
+      "label": "Farmasi",
+      "position": [
+        16.2,
+        3.0,
+        1.55
+      ],
+      "northYawDeg": 0,
+      "files": {
+        "preview": "panos/farmasi-preview.webp",
+        "mobile": "panos/farmasi-mobile.webp",
+        "full": "panos/farmasi-full.webp"
+      },
+      "links": [
+        {
+          "to": "koridor-timur",
+          "yawDeg": 0.0,
+          "pitchDeg": -0.0,
+          "via": "loket_farmasi"
+        }
+      ],
+      "info": [
+        {
+          "yawDeg": 101.6,
+          "pitchDeg": -16.4,
+          "title": "Rak obat",
+          "text": "Rak obat setinggi dinding di sisi timur.",
+          "target": [
+            17.7,
+            2.69,
+            1.1
+          ]
+        },
+        {
+          "yawDeg": 353.4,
+          "pitchDeg": -38.2,
+          "title": "Meja racik",
+          "text": "Meja kerja apoteker untuk menyiapkan dan mengemas obat.",
+          "target": [
+            16.05,
+            4.3,
+            0.52
+          ]
+        },
+        {
+          "yawDeg": 247.3,
+          "pitchDeg": -38.1,
+          "title": "Kulkas obat",
+          "text": "Penyimpanan obat yang butuh suhu dingin.",
+          "target": [
+            14.88,
+            2.45,
+            0.43
+          ]
+        }
+      ],
+      "shift": 0.0
+    },
+    {
+      "id": "mushola",
+      "room": "mushola",
+      "label": "Mushola",
+      "position": [
+        20.0,
+        1.8,
+        1.568
+      ],
+      "northYawDeg": 0,
+      "files": {
+        "preview": "panos/mushola-preview.webp",
+        "mobile": "panos/mushola-mobile.webp",
+        "full": "panos/mushola-full.webp"
+      },
+      "links": [
+        {
+          "to": "koridor-timur",
+          "yawDeg": 27.8,
+          "pitchDeg": -15.1,
+          "via": "d_mushola"
+        }
+      ],
+      "info": [
+        {
+          "yawDeg": 281.7,
+          "pitchDeg": 12.4,
+          "title": "Penunjuk kiblat",
+          "text": "Penanda arah kiblat di dinding barat.",
+          "target": [
+            18.08,
+            2.2,
+            2.0
+          ]
+        },
+        {
+          "yawDeg": 60.6,
+          "pitchDeg": -27.2,
+          "title": "Rak Al-Qur'an dan mukena",
+          "text": "Rak di dinding timur.",
+          "target": [
+            21.6,
+            2.7,
+            0.62
+          ]
+        }
+      ],
+      "shift": 0.0
+    },
+    {
+      "id": "koridor-barat",
+      "room": "koridor",
+      "label": "Koridor (barat)",
+      "position": [
+        5.5,
+        7.1,
+        1.55
+      ],
+      "northYawDeg": 0,
+      "files": {
+        "preview": "panos/koridor-barat-preview.webp",
+        "mobile": "panos/koridor-barat-mobile.webp",
+        "full": "panos/koridor-barat-full.webp"
+      },
+      "links": [
+        {
+          "to": "resepsionis",
+          "yawDeg": 104.0,
+          "pitchDeg": -8.4,
+          "via": "o_hall"
+        },
+        {
+          "to": "koridor-timur",
+          "yawDeg": 90.0,
+          "pitchDeg": -21.2,
+          "via": null
+        },
+        {
+          "to": "praktik-1",
+          "yawDeg": 304.7,
+          "pitchDeg": -19.2,
+          "via": "d_p1"
+        },
+        {
+          "to": "praktik-2",
+          "yawDeg": 76.3,
+          "pitchDeg": -8.2,
+          "via": "d_p2"
+        }
+      ],
+      "info": [
+        {
+          "yawDeg": 270.0,
+          "pitchDeg": -5.8,
+          "title": "Pintu servis",
+          "text": "Akses servis dan barang di ujung barat koridor.",
+          "target": [
+            0.1,
+            7.1,
+            1.0
+          ]
+        },
+        {
+          "yawDeg": 291.7,
+          "pitchDeg": -0.0,
+          "title": "Papan nama ruang",
+          "text": "Setiap pintu ruang klinis diberi papan nama di samping kusen.",
+          "target": [
+            3.4,
+            7.93,
+            1.55
+          ]
+        }
+      ],
+      "shift": 0.0
+    },
+    {
+      "id": "koridor-timur",
+      "room": "koridor",
+      "label": "Koridor (timur)",
+      "position": [
+        16.5,
+        7.1,
+        1.55
+      ],
+      "northYawDeg": 0,
+      "files": {
+        "preview": "panos/koridor-timur-preview.webp",
+        "mobile": "panos/koridor-timur-mobile.webp",
+        "full": "panos/koridor-timur-full.webp"
+      },
+      "links": [
+        {
+          "to": "koridor-barat",
+          "yawDeg": 270.0,
+          "pitchDeg": -21.2,
+          "via": null
+        },
+        {
+          "to": "sterilisasi",
+          "yawDeg": 280.4,
+          "pitchDeg": -6.3,
+          "via": "d_steril"
+        },
+        {
+          "to": "praktik-3",
+          "yawDeg": 45.0,
+          "pitchDeg": -23.4,
+          "via": "d_p3"
+        },
+        {
+          "to": "radiologi",
+          "yawDeg": 72.5,
+          "pitchDeg": -10.4,
+          "via": "d_radiologi"
+        },
+        {
+          "to": "farmasi",
+          "yawDeg": 198.4,
+          "pitchDeg": -0.0,
+          "via": "loket_farmasi"
+        },
+        {
+          "to": "mushola",
+          "yawDeg": 101.4,
+          "pitchDeg": -6.9,
+          "via": "d_wudhu"
+        }
+      ],
+      "info": [
+        {
+          "yawDeg": 6.8,
+          "pitchDeg": -0.0,
+          "title": "Papan nama ruang",
+          "text": "Papan nama Ruang Praktik 3 di samping pintunya.",
+          "target": [
+            16.6,
+            7.93,
+            1.55
+          ]
+        },
+        {
+          "yawDeg": 75.0,
+          "pitchDeg": 14.8,
+          "title": "Lampu tanda radiasi",
+          "text": "Lampu merah di atas pintu radiologi menyala saat paparan berlangsung.",
+          "target": [
+            19.35,
+            7.87,
+            2.33
+          ]
+        }
+      ],
+      "shift": 0.0
+    },
+    {
+      "id": "praktik-1",
+      "room": "praktik-1",
+      "label": "Ruang Praktik 1",
+      "position": [
+        3.3,
+        9.6,
+        1.55
+      ],
+      "northYawDeg": 0,
+      "files": {
+        "preview": "panos/praktik-1-preview.webp",
+        "mobile": "panos/praktik-1-mobile.webp",
+        "full": "panos/praktik-1-full.webp"
+      },
+      "links": [
+        {
+          "to": "koridor-barat",
+          "yawDeg": 150.6,
+          "pitchDeg": -16.7,
+          "via": "d_p1"
+        }
+      ],
+      "info": [
+        {
+          "yawDeg": 355.3,
+          "pitchDeg": -13.6,
+          "title": "Dental unit modern berlayar",
+          "text": "Kursi pasien dengan lampu operasi dan monitor, dipasang lurus sejajar dinding.",
+          "target": [
+            3.13,
+            11.7,
+            1.04
+          ]
+        },
+        {
+          "yawDeg": 348.5,
+          "pitchDeg": -0.9,
+          "title": "Jendela lebar + vitrase di sisi DU",
+          "text": "Cahaya alami masuk dari samping kursi (sisi asisten), bukan dari depan pasien.",
+          "target": [
+            2.5,
+            13.52,
+            1.49
+          ]
+        },
+        {
+          "yawDeg": 311.0,
+          "pitchDeg": -8.6,
+          "title": "Zona statis jam 12: kabinet + wastafel, ≥ 1,0 m bebas",
+          "text": "Kabinet dan wastafel di belakang sandaran kepala, dengan lorong bebas minimal 1,0 m.",
+          "target": [
+            0.81,
+            11.76,
+            1.05
+          ]
+        }
+      ],
+      "shift": 0.0
+    },
+    {
+      "id": "praktik-2",
+      "room": "praktik-2",
+      "label": "Ruang Praktik 2",
+      "position": [
+        8.3,
+        9.6,
+        1.55
+      ],
+      "northYawDeg": 0,
+      "files": {
+        "preview": "panos/praktik-2-preview.webp",
+        "mobile": "panos/praktik-2-mobile.webp",
+        "full": "panos/praktik-2-full.webp"
+      },
+      "links": [
+        {
+          "to": "koridor-barat",
+          "yawDeg": 150.6,
+          "pitchDeg": -16.7,
+          "via": "d_p2"
+        }
+      ],
+      "info": [
+        {
+          "yawDeg": 351.5,
+          "pitchDeg": -13.5,
+          "title": "Dental unit modern berlayar",
+          "text": "Kursi pasien dengan lampu operasi dan monitor, dipasang lurus sejajar dinding.",
+          "target": [
+            7.99,
+            11.7,
+            1.04
+          ]
+        },
+        {
+          "yawDeg": 348.5,
+          "pitchDeg": -0.9,
+          "title": "Jendela lebar + vitrase di sisi DU",
+          "text": "Cahaya alami masuk dari samping kursi (sisi asisten), bukan dari depan pasien.",
+          "target": [
+            7.5,
+            13.52,
+            1.49
+          ]
+        },
+        {
+          "yawDeg": 309.4,
+          "pitchDeg": -8.4,
+          "title": "Zona statis jam 12: kabinet + wastafel, ≥ 1,0 m bebas",
+          "text": "Kabinet dan wastafel di belakang sandaran kepala, dengan lorong bebas minimal 1,0 m.",
+          "target": [
+            5.67,
+            11.76,
+            1.05
+          ]
+        }
+      ],
+      "shift": 0.0
+    },
+    {
+      "id": "sterilisasi",
+      "room": "sterilisasi",
+      "label": "Sterilisasi",
+      "position": [
+        11.6,
+        9.4,
+        1.55
+      ],
+      "northYawDeg": 0,
+      "files": {
+        "preview": "panos/sterilisasi-preview.webp",
+        "mobile": "panos/sterilisasi-mobile.webp",
+        "full": "panos/sterilisasi-full.webp"
+      },
+      "links": [
+        {
+          "to": "koridor-timur",
+          "yawDeg": 180.0,
+          "pitchDeg": -21.4,
+          "via": "d_steril"
+        }
+      ],
+      "info": [
+        {
+          "yawDeg": 241.8,
+          "pitchDeg": -29.8,
+          "title": "Kotor",
+          "text": "Instrumen kotor diterima dan didekontaminasi di sini.",
+          "target": [
+            10.57,
+            8.85,
+            0.88
+          ]
+        },
+        {
+          "yawDeg": 351.5,
+          "pitchDeg": -6.9,
+          "title": "Bersih",
+          "text": "Instrumen yang sudah dicuci dan dikeringkan dikemas, lalu masuk autoklaf.",
+          "target": [
+            11.05,
+            13.09,
+            1.1
+          ]
+        },
+        {
+          "yawDeg": 29.9,
+          "pitchDeg": -12.9,
+          "title": "Area steril",
+          "text": "Instrumen steril disimpan di lemari kaca dan diserahkan kembali ke ruang praktik.",
+          "target": [
+            12.85,
+            11.57,
+            0.97
+          ]
+        }
+      ],
+      "shift": 0.0
+    },
+    {
+      "id": "praktik-3",
+      "room": "praktik-3",
+      "label": "Ruang Praktik 3",
+      "position": [
+        16.5,
+        9.6,
+        1.55
+      ],
+      "northYawDeg": 0,
+      "files": {
+        "preview": "panos/praktik-3-preview.webp",
+        "mobile": "panos/praktik-3-mobile.webp",
+        "full": "panos/praktik-3-full.webp"
+      },
+      "links": [
+        {
+          "to": "koridor-timur",
+          "yawDeg": 150.6,
+          "pitchDeg": -16.7,
+          "via": "d_p3"
+        }
+      ],
+      "info": [
+        {
+          "yawDeg": 351.5,
+          "pitchDeg": -13.5,
+          "title": "Dental unit modern berlayar",
+          "text": "Kursi pasien dengan lampu operasi dan monitor, dipasang lurus sejajar dinding.",
+          "target": [
+            16.19,
+            11.7,
+            1.04
+          ]
+        },
+        {
+          "yawDeg": 348.5,
+          "pitchDeg": -0.9,
+          "title": "Jendela lebar + vitrase di sisi DU",
+          "text": "Cahaya alami masuk dari samping kursi (sisi asisten), bukan dari depan pasien.",
+          "target": [
+            15.7,
+            13.52,
+            1.49
+          ]
+        },
+        {
+          "yawDeg": 309.4,
+          "pitchDeg": -8.4,
+          "title": "Zona statis jam 12: kabinet + wastafel, ≥ 1,0 m bebas",
+          "text": "Kabinet dan wastafel di belakang sandaran kepala, dengan lorong bebas minimal 1,0 m.",
+          "target": [
+            13.88,
+            11.76,
+            1.05
+          ]
+        }
+      ],
+      "shift": 0.0
+    },
+    {
+      "id": "radiologi",
+      "room": "radiologi",
+      "label": "Radiologi Panoramik",
+      "position": [
+        20.1,
+        9.6,
+        1.55
+      ],
+      "northYawDeg": 0,
+      "files": {
+        "preview": "panos/radiologi-preview.webp",
+        "mobile": "panos/radiologi-mobile.webp",
+        "full": "panos/radiologi-full.webp"
+      },
+      "links": [
+        {
+          "to": "koridor-timur",
+          "yawDeg": 205.1,
+          "pitchDeg": -17.3,
+          "via": "d_radiologi"
+        }
+      ],
+      "info": [
+        {
+          "yawDeg": 359.1,
+          "pitchDeg": -8.0,
+          "title": "Unit panoramik",
+          "text": "Rontgen panoramik gigi; pasien berdiri di tanda lantai.",
+          "target": [
+            20.05,
+            12.73,
+            1.11
+          ]
+        },
+        {
+          "yawDeg": 105.9,
+          "pitchDeg": -33.1,
+          "title": "Meja baca hasil",
+          "text": "Monitor untuk membaca hasil radiograf.",
+          "target": [
+            21.5,
+            9.2,
+            0.6
+          ]
+        },
+        {
+          "yawDeg": 56.3,
+          "pitchDeg": -24.8,
+          "title": "Tabir timbal",
+          "text": "Operator berlindung di balik tabir saat menekan tombol paparan.",
+          "target": [
+            21.0,
+            10.2,
+            1.05
+          ]
+        }
+      ],
+      "shift": 0.0
+    }
+  ],
+  "gallery": [
+    {
+      "file": "gallery/01-denah-legenda.webp",
+      "thumb": "gallery/01-denah-legenda-thumb.webp",
+      "title": "Denah lantai",
+      "caption": "Denah 22,0 × 13,6 m dengan zona fungsi, alur pasien, dan alur instrumen."
+    },
+    {
+      "file": "gallery/02-tampak-luar.webp",
+      "thumb": "gallery/02-tampak-luar-thumb.webp",
+      "title": "Tampak luar",
+      "caption": "Fasad selatan dengan pintu masuk kaca dan parkir, termasuk petak difabel."
+    },
+    {
+      "file": "gallery/03-maket-potong.webp",
+      "thumb": "gallery/03-maket-potong-thumb.webp",
+      "title": "Maket potong",
+      "caption": "Potongan tanpa atap yang memperlihatkan seluruh ruang dan hubungannya."
+    },
+    {
+      "file": "gallery/04-ruang-praktik.webp",
+      "thumb": "gallery/04-ruang-praktik-thumb.webp",
+      "title": "Ruang praktik",
+      "caption": "Dental unit sejajar jendela lebar bervitrase, kabinet di belakang sandaran kepala."
+    },
+    {
+      "file": "gallery/04b-ruang-praktik-barat.webp",
+      "thumb": "gallery/04b-ruang-praktik-barat-thumb.webp",
+      "title": "Ruang praktik, sisi kabinet",
+      "caption": "Kabinet dan wastafel di zona statis jam 12, dengan lorong bebas di belakang kursi."
+    },
+    {
+      "file": "gallery/04c-ruang-praktik-potret.webp",
+      "thumb": "gallery/04c-ruang-praktik-potret-thumb.webp",
+      "title": "Ruang praktik, potret",
+      "caption": "Dental unit dengan dinding kabinet dan ceruk di belakangnya."
+    },
+    {
+      "file": "gallery/05-resepsionis-ruang-tunggu.webp",
+      "thumb": "gallery/05-resepsionis-ruang-tunggu-thumb.webp",
+      "title": "Resepsionis dan ruang tunggu",
+      "caption": "Hall terbuka: counter menghadap pintu masuk, ruang tunggu di sisi barat."
+    },
+    {
+      "file": "gallery/05b-ruang-tunggu.webp",
+      "thumb": "gallery/05b-ruang-tunggu-thumb.webp",
+      "title": "Ruang tunggu",
+      "caption": "Pojok bermain anak dan sudut baca di sisi barat ruang tunggu."
+    },
+    {
+      "file": "gallery/05c-resepsionis.webp",
+      "thumb": "gallery/05c-resepsionis-thumb.webp",
+      "title": "Resepsionis",
+      "caption": "Sisi kerja staf dengan komputer, poster edukasi, dan pintu ke farmasi."
+    },
+    {
+      "file": "gallery/06-sterilisasi.webp",
+      "thumb": "gallery/06-sterilisasi-thumb.webp",
+      "title": "Sterilisasi",
+      "caption": "Counter berlabel kotor, bersih, dan steril, serta lemari steril berpintu kaca."
+    },
+    {
+      "file": "gallery/07-radiologi.webp",
+      "thumb": "gallery/07-radiologi-thumb.webp",
+      "title": "Radiologi panoramik",
+      "caption": "Unit panoramik, meja baca dengan monitor radiograf, tabir timbal, dan rak apron."
+    },
+    {
+      "file": "gallery/08-farmasi.webp",
+      "thumb": "gallery/08-farmasi-thumb.webp",
+      "title": "Farmasi",
+      "caption": "Rak obat, meja racik, dan loket penyerahan obat ke koridor."
+    },
+    {
+      "file": "gallery/09-mushola.webp",
+      "thumb": "gallery/09-mushola-thumb.webp",
+      "title": "Mushola",
+      "caption": "Sajadah, penunjuk kiblat, serta rak mukena dan Al-Qur'an."
+    }
+  ],
+  "conventions": {
+    "yaw": "derajat, searah jarum jam dilihat dari atas, 0 = utara (+Y)",
+    "pitch": "derajat, positif ke atas, 0 = horizontal",
+    "equirect": "tengah gambar = yaw 0 (utara); ke kanan gambar yaw bertambah (timur di 3/4 lebar, barat di 1/4 lebar, selatan di kedua tepi); atas gambar = zenit",
+    "orientationTest": "panos/_uji-arah.webp"
+  }
+}
