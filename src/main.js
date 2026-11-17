@@ -8,6 +8,7 @@ import { createPanel } from './panel.js'
 import { createCard } from './card.js'
 import { createPlan } from './plan.js'
 import { createGallery } from './gallery.js'
+import { createSnapshotFeedback, isPlainShortcut } from './snapshot.js'
 import { go, on, presetLayers, setRoof, setRoom, startRouter, state } from './state.js'
 
 const app = document.getElementById('app')
@@ -74,13 +75,33 @@ async function boot() {
   const canvasHost = h('div', { class: 'maket-canvas' })
   const labelHost = h('div', { class: 'labels' })
   const status = h('div', { class: 'status', role: 'status' }, h('span', {}, 'Memuat maket 3D…'), h('span', { class: 'bar' }, h('i')))
+  let showPins = true
+  try { showPins = localStorage.getItem('provenza-maket-angka') !== '0' } catch { /* abaikan */ }
+  labelHost.classList.toggle('no-pins', !showPins)
+  const pinsBtn = toolButton('Angka ruang (H)', icons.pins, () => setPins(!showPins))
+  pinsBtn.setAttribute('aria-label', 'Angka ruang')
+  pinsBtn.setAttribute('aria-pressed', String(showPins))
+  const shotBtn = toolButton('Ambil gambar (P)', icons.camera, () => capture())
+  shotBtn.setAttribute('aria-label', 'Ambil gambar')
+  const feedback = createSnapshotFeedback()
   const tools = h('div', { class: 'stage-tools' },
     toolButton('Atur ulang tampilan', icons.reset, () => maketApi?.then((m) => m.reset())),
     toolButton('Perbesar', icons.plus, () => maketApi?.then((m) => m.zoom(1.3))),
     toolButton('Perkecil', icons.minus, () => maketApi?.then((m) => m.zoom(1 / 1.3))),
+    pinsBtn, shotBtn,
   )
   tools.hidden = true
-  viewMaket.append(poster, canvasHost, labelHost, tools, status)
+  viewMaket.append(poster, canvasHost, labelHost, tools, feedback.flash, feedback.toast, status)
+
+  function setPins(on) {
+    showPins = on
+    pinsBtn.setAttribute('aria-pressed', String(on))
+    labelHost.classList.toggle('no-pins', !on)
+    try { localStorage.setItem('provenza-maket-angka', on ? '1' : '0') } catch { /* abaikan */ }
+  }
+  function capture() {
+    maketApi?.then((m) => { if (m.capture?.()) feedback.notify() })
+  }
   poster.addEventListener('error', () => {
     poster.remove()
     viewMaket.prepend(h('div', { class: 'fallback-art' }, h('strong', {}, 'Provenza Dental')))
@@ -122,7 +143,7 @@ async function boot() {
       return stub
     })
   }
-  const stub = { setActive() {}, select() {}, setLayers() {}, reset() {}, zoom() {}, resize() {} }
+  const stub = { setActive() {}, select() {}, setLayers() {}, reset() {}, zoom() {}, resize() {}, capture: () => false }
 
   function panelInsets() {
     const rect = panel.el.getBoundingClientRect()
@@ -200,6 +221,11 @@ async function boot() {
 
   mountCard()
   addEventListener('keydown', (e) => {
+    if (state.mode === 'maket' && !tools.hidden && isPlainShortcut(e) && !document.querySelector('dialog[open]')) {
+      const k = e.key.toLowerCase()
+      if (k === 'h') { setPins(!showPins); return }
+      if (k === 'p') { capture(); return }
+    }
     if (e.key === 'Escape' && state.roomId && state.mode !== 'tur' && !document.querySelector('dialog[open]')) setRoom(null)
   })
 

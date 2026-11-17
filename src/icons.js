@@ -17,6 +17,7 @@ export const icons = {
   plus: wrap('<path d="M12 5v14M5 12h14"/>'),
   minus: wrap('<path d="M5 12h14"/>'),
   camera: wrap('<path d="M4 8.5h3l1.5-2.5h7L17 8.5h3v10.5H4z"/><circle cx="12" cy="13.5" r="3.2"/>'),
+  pins: wrap('<path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/>'),
   hint: wrap('<circle cx="12" cy="12" r="8.5"/><path d="M12 11v5M12 8h.01"/>'),
   list: wrap('<path d="M8.5 6.5h11M8.5 12h11M8.5 17.5h11M4.5 6.5h.01M4.5 12h.01M4.5 17.5h.01"/>'),
 }

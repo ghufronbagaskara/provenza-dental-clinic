@@ -12,6 +12,7 @@ import { MeshoptDecoder } from 'three/addons/libs/meshopt_decoder.module.js'
 import { reducedMotion } from '../dom.js'
 import { createPin } from '../pin.js'
 import { url } from '../data.js'
+import { captureCanvas, stampName } from '../snapshot.js'
 
 const FOV = 32
 const BG = '#e7e2d8'
@@ -329,6 +330,17 @@ export async function createMaket({ host, labelHost, tour, onSelect, onProgress 
       resize()
       if (!placed && width) { placed = true; moveTo(defaultView(), false) }
       request()
+    },
+    // Mengembalikan true bila gambar diambil.
+    capture() {
+      if (!active || !width) return false
+      captureCanvas({
+        renderer, width, height,
+        name: stampName(`provenza-maket-${roofNode?.visible ? 'atap' : 'potong'}`),
+        render: () => renderer.render(scene, camera),
+      })
+      request()
+      return true
     },
     reset: () => moveTo(defaultView()),
     zoom(factor) {
