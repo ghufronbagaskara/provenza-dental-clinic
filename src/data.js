@@ -1,5 +1,11 @@
 // Memuat data tur: data/tour.json (asli) atau jatuh ke data/tour.sample.json.
-export const url = (path) => import.meta.env.BASE_URL + path
+const VERSION = typeof __BUILD_ID__ !== 'undefined' ? __BUILD_ID__ : ''
+
+export const url = (path) => {
+  const base = import.meta.env.BASE_URL + path
+  if (!VERSION) return base
+  return base + (base.includes('?') ? '&' : '?') + 'v=' + VERSION
+}
 
 async function fetchJson(path) {
   const res = await fetch(url(path))
