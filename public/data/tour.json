@@ -157,6 +157,15 @@
       ]
     },
     {
+      "zone": "servis",
+      "rect": [
+        22.0,
+        1.52,
+        1.03,
+        1.96
+      ]
+    },
+    {
       "zone": "kotor",
       "rect": [
         10.06,
@@ -536,10 +545,11 @@
         3.5,
         5.3
       ],
-      "description": "Ruang rontgen panoramik dengan dinding dan pintu berlapis timbal. Operator memotret dari balik tabir timbal, lalu membaca hasil di meja baca.",
+      "description": "Ruang rontgen panoramik dengan dinding dan pintu berlapis timbal. Bilik mesin panoramik dipisahkan sekat penuh, pintu timbal berkaca intip, dan jendela kaca timbal dari meja baca operator.",
       "equipment": [
         "Unit rontgen panoramik",
-        "Tabir timbal dengan konsol paparan",
+        "Sekat penuh, pintu timbal berkaca intip, dan jendela kaca timbal",
+        "Konsol paparan di dinding sekat",
         "Meja baca dengan monitor radiograf dan kursi",
         "Rak apron timbal",
         "Lemari kecil",
@@ -548,6 +558,32 @@
         "Poster Proteksi radiasi"
       ],
       "pano": "radiologi"
+    },
+    {
+      "id": "kompresor",
+      "no": 13,
+      "name": "Ruang Kompresor",
+      "zone": "servis",
+      "area": 2.0,
+      "rect": [
+        22.0,
+        1.4,
+        1.15,
+        2.2
+      ],
+      "inner": [
+        22.0,
+        1.52,
+        1.03,
+        1.96
+      ],
+      "description": "Ruang utilitas tertutup di sisi timur mushola yang menampung kabinet akustik kompresor dental dan panel kontrol listrik, dilengkapi pintu servis ganda berventilasi serta kisi udara.",
+      "equipment": [
+        "Kabinet akustik kompresor dental (tangki udara, motor twin-piston, air dryer, manometer)",
+        "Panel MCB dan saklar kontrol",
+        "Pintu servis ganda berventilasi dan kisi udara"
+      ],
+      "pano": null
     }
   ],
   "flows": [
@@ -829,7 +865,7 @@
     "nodes": {
       "struktur": {
         "group": "struktur",
-        "triangles": 14902,
+        "triangles": 17896,
         "atlas": 2048
       },
       "room:toilet": {
@@ -842,76 +878,86 @@
         "triangles": 2378,
         "atlas": 1024
       },
+      "room:kompresor": {
+        "group": "kompresor",
+        "triangles": 2464,
+        "atlas": 1024
+      },
       "room:praktik-1": {
         "group": "praktik1",
-        "triangles": 21947,
-        "atlas": 2048
+        "triangles": 21719,
+        "atlas": 4096
       },
       "room:praktik-2": {
         "group": "praktik2",
-        "triangles": 21947,
-        "atlas": 2048
+        "triangles": 21719,
+        "atlas": 4096
       },
       "room:praktik-3": {
         "group": "praktik3",
-        "triangles": 21949,
-        "atlas": 2048
+        "triangles": 21721,
+        "atlas": 4096
       },
       "room:farmasi": {
         "group": "farmasi",
-        "triangles": 71416,
+        "triangles": 69960,
         "atlas": 2048
       },
       "room:koridor": {
         "group": "koridor",
-        "triangles": 3102,
+        "triangles": 2990,
         "atlas": 1024
       },
       "room:radiologi": {
         "group": "radiologi",
-        "triangles": 15822,
+        "triangles": 16365,
         "atlas": 1024
+      },
+      "atap": {
+        "group": "atap",
+        "triangles": 1294,
+        "atlas": 4096
       },
       "room:tunggu": {
         "group": "tunggu",
-        "triangles": 43099,
-        "atlas": 2048
+        "triangles": 40711,
+        "atlas": 4096
       },
       "room:resepsionis": {
         "group": "resepsionis",
-        "triangles": 16132,
-        "atlas": 2048
+        "triangles": 15613,
+        "atlas": 4096
       },
       "room:mushola": {
         "group": "mushola",
-        "triangles": 2771,
+        "triangles": 2777,
         "atlas": 1024
       },
       "room:sterilisasi": {
         "group": "steril",
-        "triangles": 13818,
+        "triangles": 13830,
         "atlas": 2048
       },
       "tapak": {
         "group": "tapak",
-        "triangles": 15015,
-        "atlas": 2048
+        "triangles": 15057,
+        "atlas": 4096
       },
       "du:praktik-1": {
         "group": "du",
-        "triangles": 19771,
+        "triangles": 19397,
         "atlas": 512,
         "instanced": true
       },
       "du:praktik-2": {
         "group": "du",
-        "triangles": 19771,
+        "triangles": 19397,
         "atlas": 512,
         "instanced": true
       },
       "du:praktik-3": {
         "group": "du",
-        "triangles": 19771,
+        "triangles": 19397,
         "atlas": 512,
         "instanced": true
       },
@@ -921,19 +967,19 @@
       },
       "kaca:vitrase": {
         "group": "kaca",
-        "triangles": 7305
+        "triangles": 6654
+      },
+      "kaca:kaca-timbal": {
+        "group": "kaca",
+        "triangles": 56
       },
       "kaca:lain": {
         "group": "kaca",
-        "triangles": 5602
+        "triangles": 5239
       },
       "kaca:kaca-buram": {
         "group": "kaca",
         "triangles": 212
-      },
-      "kaca:kaca-timbal": {
-        "group": "kaca",
-        "triangles": 12
       }
     },
     "baked": true
@@ -1675,8 +1721,8 @@
       "room": "radiologi",
       "label": "Radiologi Panoramik",
       "position": [
-        20.1,
-        9.6,
+        20.029,
+        9.529,
         1.55
       ],
       "northYawDeg": 0,
@@ -1688,26 +1734,21 @@
       "links": [
         {
           "to": "koridor-timur",
-          "yawDeg": 205.1,
-          "pitchDeg": -17.3,
+          "yawDeg": 203.9,
+          "pitchDeg": -18.2,
           "via": "d_radiologi"
+        },
+        {
+          "to": "radiologi-pano",
+          "yawDeg": 313.6,
+          "pitchDeg": -29.5,
+          "via": "d_ro_pano"
         }
       ],
       "info": [
         {
-          "yawDeg": 359.1,
-          "pitchDeg": -8.0,
-          "title": "Unit panoramik",
-          "text": "Rontgen panoramik gigi; pasien berdiri di tanda lantai.",
-          "target": [
-            20.05,
-            12.73,
-            1.11
-          ]
-        },
-        {
-          "yawDeg": 105.9,
-          "pitchDeg": -33.1,
+          "yawDeg": 102.6,
+          "pitchDeg": -32.2,
           "title": "Meja baca hasil",
           "text": "Monitor untuk membaca hasil radiograf.",
           "target": [
@@ -1717,14 +1758,85 @@
           ]
         },
         {
-          "yawDeg": 56.3,
-          "pitchDeg": -24.8,
-          "title": "Tabir timbal",
-          "text": "Operator berlindung di balik tabir saat menekan tombol paparan.",
+          "yawDeg": 52.4,
+          "pitchDeg": -5.2,
+          "title": "Sekat & jendela kaca timbal",
+          "text": "Operator memantau dan menekan konsol paparan dari balik sekat penuh dan kaca timbal.",
           "target": [
-            21.0,
+            20.9,
             10.2,
-            1.05
+            1.45
+          ]
+        },
+        {
+          "yawDeg": 313.6,
+          "pitchDeg": -29.5,
+          "title": "Pintu sekat timbal",
+          "text": "Pintu berlapis timbal berkaca intip menuju bilik panoramik.",
+          "target": [
+            19.33,
+            10.2,
+            1.0
+          ]
+        }
+      ],
+      "shift": 0.1
+    },
+    {
+      "id": "radiologi-pano",
+      "room": "radiologi",
+      "label": "Bilik Panoramik (Radiologi)",
+      "position": [
+        20.2,
+        11.25,
+        1.55
+      ],
+      "northYawDeg": 0,
+      "files": {
+        "preview": "panos/radiologi-pano-preview.webp",
+        "mobile": "panos/radiologi-pano-mobile.webp",
+        "full": "panos/radiologi-pano-full.webp"
+      },
+      "links": [
+        {
+          "to": "radiologi",
+          "yawDeg": 219.8,
+          "pitchDeg": -21.9,
+          "via": "d_ro_pano"
+        }
+      ],
+      "info": [
+        {
+          "yawDeg": 354.2,
+          "pitchDeg": -16.5,
+          "title": "Unit rontgen panoramik",
+          "text": "Mesin rontgen panoramik gigi; pasien berdiri di penanda lantai.",
+          "target": [
+            20.05,
+            12.73,
+            1.11
+          ]
+        },
+        {
+          "yawDeg": 329.8,
+          "pitchDeg": -7.2,
+          "title": "Rak apron timbal",
+          "text": "Apron timbal 0,5 mm Pb dan pelindung tiroid untuk proteksi radiasi pasien.",
+          "target": [
+            19.02,
+            13.28,
+            1.25
+          ]
+        },
+        {
+          "yawDeg": 24.3,
+          "pitchDeg": 15.4,
+          "title": "Lampu tanda X-RAY ON",
+          "text": "Lampu indikator merah dan rambu peringatan menyala saat paparan berlangsung.",
+          "target": [
+            21.15,
+            13.36,
+            2.19
           ]
         }
       ],
@@ -1748,7 +1860,7 @@
       "file": "gallery/03-maket-potong.webp",
       "thumb": "gallery/03-maket-potong-thumb.webp",
       "title": "Maket potong",
-      "caption": "Potongan tanpa atap yang memperlihatkan seluruh ruang dan hubungannya."
+      "caption": "Potongan tanpa atap yang memperlihatkan seluruh ruang termasuk ruang kompresor dan hubungannya."
     },
     {
       "file": "gallery/04-ruang-praktik.webp",
@@ -1796,7 +1908,7 @@
       "file": "gallery/07-radiologi.webp",
       "thumb": "gallery/07-radiologi-thumb.webp",
       "title": "Radiologi panoramik",
-      "caption": "Unit panoramik, meja baca dengan monitor radiograf, tabir timbal, dan rak apron."
+      "caption": "Sekat penuh berpintu timbal berkaca intip, jendela kaca timbal, konsol paparan, dan meja baca radiograf."
     },
     {
       "file": "gallery/08-farmasi.webp",

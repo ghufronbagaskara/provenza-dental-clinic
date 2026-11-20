@@ -13,9 +13,9 @@ console.log(real ? 'Data: tour.json (asli)' : 'Data: tour.sample.json (sampel, t
 const panoById = new Map(tour.panos.map((pano) => [pano.id, pano]))
 const inRange = (value, min, max) => Number.isFinite(value) && value >= min && value <= max
 
-test('13 panorama dengan id unik', () => {
+test('14 panorama dengan id unik', () => {
   assert.equal(panoById.size, tour.panos.length, 'id panorama ganda')
-  assert.equal(tour.panos.length, 13)
+  assert.equal(tour.panos.length, 14)
 })
 
 test('nomor dan id ruang unik', () => {
